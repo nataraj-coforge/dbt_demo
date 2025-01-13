@@ -1,3 +1,5 @@
+Congrats Nataraj! Good work. Focus on learning & ignore the distractions caused by others!
+
 Welcome to your new dbt project!
 
 ### Using the starter project
