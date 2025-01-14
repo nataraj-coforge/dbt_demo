@@ -1,0 +1,21 @@
+version: 2.0
+
+models:
+  - name: stg_listing
+    columns:
+      - name: listing_id
+        tests:
+          - unique
+          - not_null
+
+      - name: host_id
+        tests:
+        - not_null
+
+      - name: room_type
+        tests:
+          - accepted_values: 
+              values: ['Entire home/apt',
+                       'Private room',
+                       'Shared room',
+                       'Hotel room']         
