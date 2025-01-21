@@ -1,7 +1,8 @@
 version: 2.0
 
 models:
-  - name: stg_listing
+  - name: stg_listings
+    description: "stage listings"
     columns:
       - name: listing_id
         tests:
@@ -18,4 +19,18 @@ models:
               values: ['Entire home/apt',
                        'Private room',
                        'Shared room',
-                       'Hotel room']         
+                       'Hotel room']
+
+      - name: minimum_nights
+        description: '{{ doc("dim_listing__minimum_nights") }}'
+        tests:
+            - not_null    
+
+  #- name: dim_hosts
+  #  description: contains information about hosts
+  #  columns:
+  #    - name: host_id
+  #    - description: primary key of table
+  #
+  #    - name: host_name
+  #    - description: name of the host
