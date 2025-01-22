@@ -1,7 +1,11 @@
+{{config(materialized = 'view')}}
+
 SELECT
-  listing_id,
-  listing_name,
-  room_type,
+{{generate_hash_key('listing_id')}} as listing_hash_key, 
+listing_id, 
+listing_name, 
+listing_url, 
+room_type, 
   CASE WHEN minimum_nights = 0 THEN 1
     ELSE minimum_nights END AS minimum_nights,
   host_id,

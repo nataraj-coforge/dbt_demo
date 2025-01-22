@@ -1,0 +1,16 @@
+version: 2
+exposures:
+  - name: Executive Dashboard
+    label: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://bccabc4d.us1a.app.preset.io/superset/dashboard/9/?edit=true&native_filters_key=y_BZvEZNIzVmP4FAslbJqFyd6M07ckJlmdg8D-uE10yWWc2C4-ADFFoL3IgZsmlV
+    description: Executive Dashboard about Airbnb listings and hosts
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('full_moon_reviews')
+ 
+    owner:
+      name: Nataraj
+      email: Nataraj@gmail.com
