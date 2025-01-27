@@ -1,5 +1,8 @@
 sources:
   - name: raw_airbnb
+    freshness:
+      warn_after: {count: 12, period: hour}  # Warn if data hasn't been updated in the last 12 hours
+      error_after: {count: 24, period: hour} # Error if data hasn't been updated in the last 24 hours
     database: raw
     schema: airbnb
 
